@@ -1,0 +1,387 @@
+/* ======================================================= */
+/* === KODE LENGKAP & FINAL untuk style.css (Sejauh Ini) === */
+/* ======================================================= */
+
+/* === Import Font dari Google Fonts === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* === CSS Reset & General Body Styling === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #FFEDFA;
+    color: #4A4A4A;
+    line-height: 1.6;
+}
+
+/* === Utility Class untuk Container === */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+/* === Typography (Pengaturan Teks) === */
+h1, h2, h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.1rem; font-weight: 600; }
+p { margin-bottom: 10px; }
+a { color: #E88383; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* === Styling untuk Tombol (Button) === */
+.btn {
+    display: inline-block;
+    background-color: #E88383;
+    color: #fff;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+.btn:hover {
+    background-color: #D37575;
+    text-decoration: none;
+}
+
+/* === Styling untuk Header === */
+.main-header {
+    background-color: #FFEDFA;
+    padding: 15px 0;
+    border-bottom: 1px solid #F5E3F0;
+
+}
+.main-nav { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.8rem; font-weight: 700; color: #333; }
+.nav-links { list-style: none; display: flex; align-items: center; gap: 25px; }
+.nav-links a { font-weight: 500; color: #4A4A4A; }
+.btn-nav { padding: 8px 20px; }
+
+/* === Styling Halaman Form (Login/Register/Booking) === */
+.form-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 200px); 
+    padding: 40px 0;
+}
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; font-weight: 500; margin-bottom: 8px; }
+.form-group input, .form-group textarea, .form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+.form-message {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 1px solid transparent;
+    font-size: 0.95rem;
+}
+.form-message.error { background-color: #f8d7da; color: #721c24; border-color: #f5c6cb; }
+.form-message.info { background-color: #cce5ff; color: #004085; border-color: #b8daff; }
+
+
+/* === Styling Halaman Home === */
+.hero-section, .features-section, .feedback-section { padding: 60px 0; }
+.hero-container { display: flex; align-items: center; gap: 50px; }
+.hero-text { flex: 1; }
+.hero-image-gallery { flex: 1; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; }
+.hero-image-gallery img { width: 100%; height: 150px; object-fit: cover; border-radius: 12px; }
+.section-header { text-align: center; margin-bottom: 40px; }
+.features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; }
+.feature-box { background-color: #FFFAFD; padding: 20px; text-align: center; border: 1px solid #F5E3F0; border-radius: 12px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.feature-box:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(232, 131, 131, 0.1); }
+.feature-box .feature-icon { width: 100%; height: 150px; object-fit: cover; border-radius: 8px; margin-bottom: 20px; }
+.testimonial-card { text-align: center; max-width: 700px; margin: 0 auto; }
+.customer-profile { margin-top: 15px; display: flex; justify-content: center; align-items: center; gap: 15px; }
+.customer-photo { width: 60px; height: 60px; border-radius: 50%; }
+
+/* === Styling Halaman Services === */
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; padding-bottom: 40px; }
+.service-card { background-color: #fff; border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); overflow: hidden; text-align: center; padding-bottom: 20px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.service-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); }
+.service-card img { width: 100%; height: 180px; object-fit: cover; margin-bottom: 15px; }
+.service-card h3 { font-size: 1.15rem; margin-bottom: 10px; padding: 0 10px; }
+.service-card .price { font-size: 1.1rem; font-weight: 600; color: #E88383; margin-bottom: 5px; }
+.service-card .duration { font-size: 0.9rem; color: #777; margin-bottom: 15px; }
+
+/* === Styling Halaman Admin === */
+.admin-dashboard { padding-top: 40px; padding-bottom: 60px; }
+.admin-nav-menu { margin-bottom: 20px; padding: 15px; background-color: #e9ecef; border: 1px solid #dee2e6; border-radius: 8px; }
+.admin-nav-menu a { margin-right: 20px; font-weight: bold; }
+.admin-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+.admin-table th, .admin-table td { border: 1px solid #ddd; padding: 12px; text-align: left; font-size: 0.9rem; }
+.admin-table th { background-color: #f2f2f2; }
+.status { padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; color: #fff; text-align: center; display: inline-block; }
+.status-menunggu-penugasan { background-color: #ffc107; }
+.status-dikonfirmasi { background-color: #17a2b8; }
+.status-selesai { background-color: #28a745; }
+.status-dibatalkan { background-color: #dc3545; }
+.admin-table .action-links a, .admin-table .action-links button { display: inline-block; padding: 6px 12px; font-size: 0.85rem; font-weight: 500; text-decoration: none; border-radius: 5px; color: #fff; border: none; cursor: pointer; margin-right: 5px; transition: filter 0.2s ease; }
+.admin-table .action-links a:hover, .admin-table .action-links button:hover { filter: brightness(90%); text-decoration: none; color: #fff; }
+.admin-table .action-links a[href*="manage_schedule.php"], .admin-table .action-links a[href*="edit_staff.php"] { background-color: #007bff; }
+.admin-table .action-links .btn-delete-staff, .admin-table .action-links .btn-delete-shift { background-color: #dc3545; }
+.btn-add { display: inline-block; padding: 10px 20px; background-color: #28a745; color: #fff; text-decoration: none; border-radius: 5px; margin-bottom: 20px; }
+.btn-add:hover { background-color: #218838; }
+
+/* === Styling untuk Modal Konfirmasi === */
+.modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0, 0, 0, 0.5); }
+.modal-content { background-color: #fff; margin: 15% auto; padding: 30px; border: 1px solid #888; width: 80%; max-width: 500px; border-radius: 12px; text-align: center; position: relative; }
+.close-button { color: #aaa; position: absolute; top: 10px; right: 20px; font-size: 28px; font-weight: bold; }
+.close-button:hover, .close-button:focus { color: black; text-decoration: none; cursor: pointer; }
+.modal-actions { margin-top: 30px; }
+.modal-actions .btn { margin: 0 10px; }
+.btn-danger { background-color: #dc3545; }
+.btn-danger:hover { background-color: #c82333; }
+.btn-secondary { background-color: #6c757d; }
+.btn-secondary:hover { background-color: #5a6268; }
+
+/* === Styling Halaman Booking === */
+.booking-page-container { display: grid; grid-template-columns: 1fr 1.2fr; gap: 50px; background: #ffffff; padding: 40px; border-radius: 12px; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07); margin-top: 40px; margin-bottom: 40px; }
+.service-summary-panel .service-title { font-size: 1.8rem; color: #333; }
+.service-summary-panel .service-description { font-size: 0.95rem; color: #666; margin-top: 10px; }
+.service-summary-panel hr { border: none; border-top: 1px solid #eee; margin: 20px 0; }
+.service-summary-panel .service-meta { display: flex; justify-content: space-between; font-size: 1rem; }
+.booking-form-panel h3 { text-align: center; margin-bottom: 25px; font-weight: 600; }
+
+/* === Styling untuk Footer === */
+.main-footer { background-color: #fff; padding: 50px 0; margin-top: 50px; border-top: 1px solid #F5E3F0; }
+.footer-container { display: grid; grid-template-columns: 1fr 2fr 1fr; align-items: flex-start; gap: 40px; }
+.footer-logo-area .copyright { font-size: 0.9rem; color: #888; margin-top: 10px; }
+.subscribe-form { display: flex; margin-top: 10px; }
+.subscribe-form input { flex-grow: 1; border: 1px solid #ddd; border-right: none; border-radius: 8px 0 0 8px; padding: 12px; }
+.subscribe-form button { border-radius: 0 8px 8px 0; }
+.footer-links-area { text-align: right; }
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 8px; }
+.footer-links a { color: #555; }
+
+/* ================================================== */
+/* === Styling Tombol Aksi di Tabel Admin (LENGKAP) === */
+/* ================================================== */
+
+/* Aturan umum untuk semua link dan tombol di dalam kolom Aksi */
+.admin-table .action-links a,
+.admin-table .action-links button {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 5px;
+    color: #fff; /* Warna teks putih */
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+    font-family: 'Poppins', sans-serif;
+    transition: filter 0.2s ease;
+}
+
+/* Efek saat mouse menyentuh tombol */
+.admin-table .action-links a:hover,
+.admin-table .action-links button:hover {
+    filter: brightness(90%);
+    text-decoration: none;
+    color: #fff;
+}
+
+/* --- Warna Spesifik untuk Setiap Tombol --- */
+
+/* Tombol Edit (Biru) untuk SEMUA halaman manajemen */
+.admin-table .action-links a[href*="edit_service.php"],
+.admin-table .action-links a[href*="edit_staff.php"],
+.admin-table .action-links a[href*="manage_schedule.php"]
+/* Tombol Delete (Merah) untuk SEMUA halaman manajemen */
+.admin-table .action-links .btn-delete,
+.admin-table .action-links .btn-delete-staff,
+.admin-table .action-links .btn-delete-shift {
+    background-color: #dc3545; /* Merah untuk Delete */
+}
+/* ======================================= */
+/* === EFEK ANIMASI HALAMAN UTAMA      === */
+/* ======================================= */
+
+/* 1. Resep Animasinya: Muncul dari bawah sambil menjadi jelas */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 2. Terapkan animasi ke setiap bagian utama di halaman Home */
+/* Properti 'forwards' memastikan elemen tetap terlihat setelah animasi selesai */
+/* Angka terakhir adalah 'delay' atau waktu tunda */
+
+.hero-text {
+    opacity: 0; /* Mulai dalam keadaan transparan */
+    animation: fadeInUp 0.8s ease-out 0.2s forwards;
+}
+
+.hero-image-gallery {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.4s forwards;
+}
+
+.features-section {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.6s forwards;
+}
+
+.feedback-section {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.8s forwards;
+}
+
+.main-footer {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 1s forwards;
+}
+
+.reviewed-service {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #777;
+    font-style: italic;
+}
+/* ======================================= */
+/* === Perbaikan CSS untuk Testimonial Slider === */
+/* ======================================= */
+
+.feedback-section .container {
+    /* Kita buat container di section ini lebih lebar agar slider tidak sempit */
+    max-width: 900px;
+}
+
+.testimonial-slider {
+    /* Atur padding agar ada ruang untuk panah di kiri dan kanan */
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px; /* Beri ruang untuk titik-titik di bawah */
+}
+
+.swiper-slide {
+    /* Pastikan setiap slide di tengah */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial-card {
+    /* Ini adalah style untuk kartu testimoni di dalam slide */
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    width: 100%;
+    max-width: 650px; /* Batasi lebar kartu agar tidak terlalu besar */
+}
+
+
+/* -- INI BAGIAN PENTING UNTUK MEMUNCULKAN PANAH & TITIK -- */
+
+/* Mengatur warna dan ukuran panah navigasi */
+.swiper-button-next, 
+.swiper-button-prev {
+    color: #E88383 !important; /* Beri warna pink aksen yang kontras */
+}
+
+/* Mengatur warna titik-titik pagination */
+.swiper-pagination-bullet {
+    background: #D37575; /* Warna titik yang tidak aktif */
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    background: #E88383; /* Warna titik yang sedang aktif */
+    opacity: 1;
+}
+.testimonial-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+}
+
+/* Style untuk tombol navigasi (panah) */
+.swiper-button-next, .swiper-button-prev {
+    color: #E88383; /* Warna pink aksen */
+}
+/* Style untuk pagination (titik-titik) */
+.swiper-pagination-bullet-active {
+    background: #E88383;
+}
+
+
+
+ 
+/* Styling untuk Menu Navigasi di dalam konten Admin */
+.admin-nav-menu {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    display: flex;
+    gap: 20px;
+}
+.admin-nav-menu a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #495057;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+}
+.admin-nav-menu a:hover {
+    color: #007bff;
+}
+.testimonial-slider {
+    max-width: 800px; /* Atur lebar slider */
+    margin: 0 auto;
+    padding: 0 40px; /* Beri ruang untuk tombol navigasi */
+}
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px; /* Beri ruang untuk pagination */
+}
+.testimonial-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+}
+
+/* Style untuk tombol navigasi (panah) */
+.swiper-button-next, .swiper-button-prev {
+    color: #E88383; /* Warna pink aksen */
+}
+/* Style untuk pagination (titik-titik) */
+.swiper-pagination-bullet-active {
+    background: #E88383;
+}
